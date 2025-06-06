@@ -25,7 +25,7 @@ function Home() {
     formData.append("image2", image2);
 
     try {
-      const response = await fetch("http://localhost:3000/api/compare", {
+      const response = await fetch("https://ai-images-change-detetction-backend.fly.dev/api/compare", {
         method: "POST",
         body: formData,
       });
@@ -74,7 +74,7 @@ function Home() {
       const diffImageBase64 = diffImage; // هو عندك أصلاً base64 مع البريفكس
 
       const response = await axios.post(
-        "http://localhost:3000/api/report", // تأكد من الـ URL صحيح
+        "https://ai-images-change-detetction-backend.fly.dev/api/report", // تأكد من الـ URL صحيح
         {
           image1Base64,
           image2Base64,
