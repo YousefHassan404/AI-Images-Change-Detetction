@@ -565,7 +565,7 @@ const Home = () => {
     formData.append('image2', image2);
 
     try {
-      const response = await fetch('https://ai-images-change-detetction-backend.fly.dev/compare', {
+      const response = await fetch('https://ai-images-change-detetction-backend.fly.dev/api/compare', {
         method: 'POST',
         body: formData,
       });
@@ -595,7 +595,7 @@ const Home = () => {
     setError(null);
 
     try {
-      const response = await fetch('https://ai-images-change-detetction-backend.fly.dev/report', {
+      const response = await fetch('https://ai-images-change-detetction-backend.fly.dev/api/report', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
